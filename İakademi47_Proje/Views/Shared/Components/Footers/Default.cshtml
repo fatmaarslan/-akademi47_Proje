@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Supplier>
+
+<!-- Brand area start -->
+<div class="brand-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="all-p-title">
+					<h3>MARKALAR</h3>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="all-brand singal-p">
+
+				@foreach (var item in Model)
+				{
+
+					<div class="singal_brand">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<a href="/Home/SupplierPage/@item.SupplierID"> <img src="~/img/resimler/@item.PhotoPath" alt="" style="height:100px;" width="200px;" /> </a>
+						</div>
+					</div>
+
+				}
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer top area start -->
+<section id="sp-bottom-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 sp-bottomcontact">
+				<div class="sp-column ">
+					<div class="sp-module ">
+						<h3 class="sp-module-title"><span>Contact us</span></h3>
+						<div class="sp-module-content">
+							<div class="custom">
+								<div class="t-bottom-content">
+									<p class="adress">
+										<em class="fa fa-map-marker"></em>
+										<span class="ft-content">
+											ergene mahallesi
+										</span>
+									</p>
+									<p class="phone">
+										<em class="fa fa-phone"></em>
+										<span class="ft-content">
+											@await Component.InvokeAsync("Telephone") @*Böyle hard code yazmıyorum settingsteki numaradan geliyor form yapcaz değiştirilcek yöneyim panelimde*@
+										</span>
+									</p>
+									<p class="email">
+										<em class="fa fa-envelope"></em>
+										<span class="ft-content">info@demo.com</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4" id="sp-bottom1">
+				<div class="sp-column ">
+					<div class="sp-module ">
+						<h3 class="sp-module-title"><span>Hakkımızda</span></h3>
+						<div class="sp-module-content">
+							<div class="custom">
+								<div class="footer-static-content">
+									<p> Sektördeki son gelişmeleri ve kullanıcı alanındaki güncel talepleri takip ederek, çağdaş düzeydeki teknolojiyle buluşturduğumuz web adresimizi sizlere sunuyor, en iyi ekip arkadaşlarımız, güçlü ve profesyonel idari yönetimimiz ile takibini gerçekleştirerek, tüketici haklarını en iyi şekilde yaşamanızı elde etmenizi sağlıyoruz.</p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</section>
+<footer id="sp-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6">
+				<p>Copyright &copy; 2015 <a href="../../../bootexperts_default.html" target="_blank">Bootexperts</a> All Rights Reserved</p>
+			</div>
+			<div class="col-sm-6 col-md-6">
+				<div class="payment-logo">
+					<img src="~/img/payment.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- footer top area end -->
